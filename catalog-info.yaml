@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "backstage-component-react-29May2024-3"  
+  description: A template for the react app with TypeScript  
+  annotations:    
+    github.com/project-slug: rohit051989/repo-component-react-app-ts-24May24
+    backstage.io/techdocs-ref: dir:.
+spec:
+  type: website
+  lifecycle: experimental
+  owner: "group:default/backstage"
