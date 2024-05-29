@@ -1,4 +1,4 @@
-name: instance Pipeline
+name: CI/CD Pipeline
 
 on:
   workflow_dispatch:  # Trigger on manual workflow dispatch
@@ -9,7 +9,7 @@ on:
         branchOrTagName:
           description: 'Name of the branch to checkout'
           required: true
-
+          
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -35,10 +35,9 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.EC2_KEY }}
 
-      - name: Get EC2 Host Key
+      - name: Add EC2 to known hosts
         run: |
-            KEY=$(ssh-keyscan -H ${{ secrets.EC2_HOST }})
-            echo "$KEY" >> ~/.ssh/known_hosts
+          ssh-keyscan -H -t rsa ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
 
       - name: Copy zip to EC2
         env:
