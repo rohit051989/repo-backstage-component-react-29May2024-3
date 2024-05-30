@@ -1,5 +1,5 @@
 {
-  "name": "backstage-component-react-29May2024-3",
+  "name": "${{values.component_id}}",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,7 +14,9 @@
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "express" : "^4.19.2",
+    "prom-client": "^15.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
