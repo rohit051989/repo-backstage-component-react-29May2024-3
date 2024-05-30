@@ -7,6 +7,6 @@ RUN npm install  # Install dependencies during build
 
 COPY . . 
 
-EXPOSE 3000
+EXPOSE 3001
 
 CMD [ "npm", "start" ]  # Start command to run your React app
