@@ -6,6 +6,7 @@ metadata:
   annotations:    
     github.com/project-slug: rohit051989/repo-backstage-component-react-29May2024-3
     backstage.io/techdocs-ref: dir:.
+    grafana/dashboard-selector: local-prometheus-dashboard
 spec:
   type: website
   lifecycle: experimental
